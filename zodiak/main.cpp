@@ -3,15 +3,14 @@ using namespace std;
 
 int main() {
     int tgl, bln;
-    cout << "PROGRAM MENENTUKAN ZODIAK\n";
-    cout << "--------------------------\n";
+    cout << "ZODIAC TEST\n";
+    cout << "-------------------\n";
 
     cout << "Masukkan tanggal lahir (1-31): ";
     cin >> tgl;
     cout << "Masukkan bulan lahir (1-12): ";
     cin >> bln;
 
-    // Validasi sederhana jumlah hari dalam bulan
     bool valid = true;
     if (bln < 1 || bln > 12) valid = false;
     else if ((bln == 4 || bln == 6 || bln == 9 || bln == 11) && (tgl < 1 || tgl > 30)) valid = false;
@@ -19,7 +18,7 @@ int main() {
     else if (tgl < 1 || tgl > 31) valid = false;
 
     if (!valid) {
-        cout << "Tanggal atau bulan tidak valid.\n";
+        cout << "Tanggal atau bulan tidak ditemukan.\n";
         return 0;
     }
 
@@ -50,9 +49,10 @@ int main() {
     else if ((tgl >= 19 && bln == 2) || (tgl <= 20 && bln == 3))
         zodiak = "Pisces";
     else
-        zodiak = "Tidak diketahui";
+        zodiak = "Tidak Ditemukan";
 
-    cout << "Zodiak kamu: " << zodiak << endl;
+    cout << "Zodiac mu Adalah: " << zodiac << endl;
 
     return 0;
 }
+
